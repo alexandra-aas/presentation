@@ -1,0 +1,70 @@
+.project-timeline {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-divider {
+  color: $medium-gray;
+  display: inline-block;
+  margin-bottom: $base-spacing;
+  position: relative;
+
+  &::before {
+    @include position(absolute, 50% 100% null null);
+    @include size(calc(#{$large-spacing} - #{$base-spacing * 2}), 1px);
+    background: linear-gradient(to right, $black, $medium-gray);
+    content: "";
+    margin-right: $base-spacing;
+  }
+}
+
+.project-link {
+  background-color: transparent !important;
+  color: $white;
+  display: inline-block;
+  margin-bottom: $base-spacing;
+  padding: $small-spacing;
+  position: relative;
+
+  &:hover {
+    background-color: inherit !important;
+    color: $black;
+  }
+}
+
+.project-link__title {
+  position: relative;
+  z-index: 50;
+}
+
+.project-link__background {
+  @include position(absolute, 0);
+  opacity: 0;
+  transition: opacity $base-duration $base-timing;
+  z-index: 10;
+
+  .project-link:hover & {
+    opacity: 1;
+  }
+}
+
+.project-link__image {
+  @include position(fixed, 0);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $base-duration $base-timing;
+  z-index: -1;
+
+  .project-link:hover & {
+    opacity: 1;
+  }
+
+  img {
+    max-height: 80vh;
+    max-width: 80vw;
+  }
+}

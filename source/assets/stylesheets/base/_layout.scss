@@ -8,11 +8,11 @@ html {
   box-sizing: inherit;
 }
 
-html,
 body {
-  height: 100%;
+  background-color: $base-background-color;
+  margin: $large-spacing;
 }
 
-body {
-  margin: 0;
+.logo {
+  @include position(absolute, $large-spacing $large-spacing null null);
 }
