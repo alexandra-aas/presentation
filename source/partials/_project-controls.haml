@@ -1,0 +1,21 @@
+- project_previous = project.article_next
+- project_next = project.article_previous
+
+.project-controls
+  .project-control.project-control--previous
+    - if project_previous
+      = link_to project_previous.url, class: "project-control__link" do
+        = material_icon("arrow_back", "project-control__icon")
+        %span.project-control__label= project_previous.title
+        .project-control__background{ style: "background-color: #{project_previous.data.color}" }
+
+  .project-control.project-control--home
+    = link_to "/", class: "article-logo" do
+      = svg("logo")
+
+  .project-control.project-control--next
+    - if project_next
+      = link_to project_next.url, class: "project-control__link" do
+        %span.project-control__label= project_next.title
+        = material_icon("arrow_forward", "project-control__icon")
+        .project-control__background{ style: "background-color: #{project_next.data.color}" }

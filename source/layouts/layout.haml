@@ -3,5 +3,6 @@
   = partial "partials/head"
   %body{ class: page_classes }
     %main{ role: "main" }
-      .logo= svg("logo")
+      = link_to "/", class: "index-logo" do
+        = svg("logo")
       = yield

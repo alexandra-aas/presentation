@@ -1,5 +1,7 @@
+
 .project-header {
-  padding: $large-spacing $large-spacing $medium-spacing;
+  color: $black;
+  padding: $large-spacing $large-spacing $xl-spacing;
 }
 
 .project-title {
@@ -14,4 +16,62 @@
 
 .project-details {
   margin-top: $base-spacing;
+}
+
+.project-images {
+  margin-top: -$large-spacing;
+}
+
+.project-image {
+  display: block;
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+.project-controls {
+  @include margin($large-spacing null);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-control {
+  width: calc(100% / 3);
+}
+
+.project-control--home {
+  text-align: center;
+}
+
+.project-control--next {
+  text-align: right;
+}
+
+.project-control__link {
+  background-color: $base-background-color !important;
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+}
+
+.project-control__icon,
+.project-control__label {
+  position: relative;
+  z-index: 10;
+}
+
+.project-control__label {
+  @include margin(null $small-spacing);
+  font-size: $medium-font-size;
+}
+
+.project-control__background {
+  @include position(absolute, 0);
+  content: "";
+  opacity: 0;
+  transition: opacity $base-duration $base-timing;
+
+  .project-control__link:hover & {
+    opacity: 1;
+  }
 }

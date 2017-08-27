@@ -1,0 +1,13 @@
+.index-logo {
+  @include position(absolute, $large-spacing $large-spacing null null);
+
+  svg {
+    fill: $gray;
+  }
+}
+
+.article-logo {
+  svg {
+    fill: $white;
+  }
+}

@@ -1,14 +1,14 @@
 // Typography
-$base-font-family: "Space Mono", sans-serif;
-$heading-font-family: "Regular Semibold", sans-serif;
+$base-font-family: "Regular Semibold", sans-serif;
+$monospace-font-family: "Space Mono", sans-serif;
 
 // Font Sizes
 $base-font-size: 1rem;
+$medium-font-size: $base-font-size * 1.25;
 $large-font-size: $base-font-size * 6.25;
 
 // Line height
 $base-line-height: 1.5;
-$heading-line-height: 1.2;
 $single-line-height: 1;
 
 // Spacing
@@ -16,15 +16,18 @@ $base-spacing: 1.25rem;
 $small-spacing: $base-spacing * 0.5;
 $medium-spacing: $base-spacing * 2;
 $large-spacing: $base-spacing * 5;
+$xl-spacing: $base-spacing * 7.5;
 
 // Colors
 $black: #000;
-$medium-gray: #777;
+
 $white: #fff;
+$gray: rgba($white, 0.5);
 
 // Font Colors
-$base-font-color: $black;
+$base-font-color: $white;
 $action-color: $white;
+$hover-action-color: $black;
 
 // Background Colors
 $base-background-color: $black;
@@ -32,3 +35,6 @@ $base-background-color: $black;
 // Animations
 $base-duration: 300ms;
 $base-timing: ease;
+
+// Sizes
+$container-width: 1100px;

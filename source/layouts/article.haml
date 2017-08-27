@@ -2,11 +2,15 @@
 %html{ lang: "en" }
   = partial "partials/head"
   %body{ class: page_classes }
-    %header.project-header{ style: "background-color: #{current_article.data.color}" }
-      %h2.project-title
-        = current_article.title
-        %time.project-title__date= current_article.date.strftime("%Y")
-      %p.project-details= current_article.tags.join(', ')
-    %main{ role: "main" }
+    %header.project-header{ style: "background-color: #{current_article.data.color};" }
+      .container
+        %h2.project-title
+          = current_article.title
+          %time.project-title__date= current_article.date.strftime("%Y")
+        %p.project-details= current_article.tags.join(', ')
+    %section.project-images{ role: "main" }
       .container
         = yield
+    %footer
+      .container
+        = partial "partials/project-controls", locals: { project: current_article }

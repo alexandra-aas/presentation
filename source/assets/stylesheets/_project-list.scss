@@ -5,40 +5,34 @@
 }
 
 .project-list__year-divider {
-  color: $medium-gray;
+  color: $gray;
   margin-bottom: $base-spacing;
   position: relative;
 
   &::before {
     @include position(absolute, 50% 100% null null);
     @include size(calc(#{$large-spacing} - #{$base-spacing * 2}), 1px);
-    background: linear-gradient(to right, transparent , $medium-gray);
+    background: linear-gradient(to right, transparent , $gray);
     content: "";
     margin-right: $base-spacing;
   }
 }
 
 .project-item {
-  color: $white;
   margin-bottom: $base-spacing;
   padding: $small-spacing;
   position: relative;
-
-  &:hover {
-    color: $black;
-  }
 }
 
 .project-item__title {
   position: relative;
-  z-index: 20;
+  z-index: 10;
 }
 
 .project-item__background {
   @include position(absolute, 0);
   opacity: 0;
   transition: opacity $base-duration $base-timing;
-  z-index: 10;
 
   .project-item:hover & {
     opacity: 1;
