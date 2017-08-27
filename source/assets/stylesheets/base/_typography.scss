@@ -10,6 +10,7 @@ html {
 }
 
 h2 {
+  font-family: $heading-font-family;
   font-size: $large-font-size;
   line-height: $single-line-height;
   margin: 0;
@@ -25,5 +26,6 @@ a {
 }
 
 time {
-  font-family: $monospace-font-family;
+  font-family: $base-font-family;
+  font-weight: 400;
 }

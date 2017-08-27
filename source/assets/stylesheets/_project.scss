@@ -1,0 +1,17 @@
+.project-header {
+  padding: $large-spacing $large-spacing $medium-spacing;
+}
+
+.project-title {
+  display: inline-block;
+  position: relative;
+}
+
+.project-title__date {
+  @include position(absolute, 0 null null 100%);
+  font-size: $base-font-size;
+}
+
+.project-details {
+  margin-top: $base-spacing;
+}

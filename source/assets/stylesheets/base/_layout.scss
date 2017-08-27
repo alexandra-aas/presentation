@@ -10,9 +10,22 @@ html {
 
 body {
   background-color: $base-background-color;
-  margin: $large-spacing;
+}
+
+main {
+  .index & {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding: $large-spacing;
+  }
 }
 
 .logo {
   @include position(absolute, $large-spacing $large-spacing null null);
+}
+
+.container {
+  @include margin(null auto);
+  max-width: 900px;
 }

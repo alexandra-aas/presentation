@@ -1,55 +1,51 @@
-.project-timeline {
+.project-list {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
 }
 
-.time-divider {
+.project-list__year-divider {
   color: $medium-gray;
-  display: inline-block;
   margin-bottom: $base-spacing;
   position: relative;
 
   &::before {
     @include position(absolute, 50% 100% null null);
     @include size(calc(#{$large-spacing} - #{$base-spacing * 2}), 1px);
-    background: linear-gradient(to right, $black, $medium-gray);
+    background: linear-gradient(to right, transparent , $medium-gray);
     content: "";
     margin-right: $base-spacing;
   }
 }
 
-.project-link {
-  background-color: transparent !important;
+.project-item {
   color: $white;
-  display: inline-block;
   margin-bottom: $base-spacing;
   padding: $small-spacing;
   position: relative;
 
   &:hover {
-    background-color: inherit !important;
     color: $black;
   }
 }
 
-.project-link__title {
+.project-item__title {
   position: relative;
-  z-index: 50;
+  z-index: 20;
 }
 
-.project-link__background {
+.project-item__background {
   @include position(absolute, 0);
   opacity: 0;
   transition: opacity $base-duration $base-timing;
   z-index: 10;
 
-  .project-link:hover & {
+  .project-item:hover & {
     opacity: 1;
   }
 }
 
-.project-link__image {
+.project-item__image {
   @include position(fixed, 0);
   align-items: center;
   display: flex;
@@ -59,12 +55,13 @@
   transition: opacity $base-duration $base-timing;
   z-index: -1;
 
-  .project-link:hover & {
-    opacity: 1;
-  }
-
   img {
     max-height: 80vh;
     max-width: 80vw;
+    opacity: 0.5;
+  }
+
+  .project-item:hover & {
+    opacity: 1;
   }
 }

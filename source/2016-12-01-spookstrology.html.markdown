@@ -1,0 +1,9 @@
+---
+title: Spookstrology
+date: 2016-12-01
+tags: example
+color: "#7DF488"
+image: "elm.gif"
+---
+
+This is an example article. You probably want to delete it and write your own articles!

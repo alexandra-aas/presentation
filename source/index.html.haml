@@ -1,11 +1,9 @@
-.logo= svg("logo")
-
-%section.project-timeline
-  %time.time-divider 2017
-  - data.projects_2017.each do |project|
-    = partial "partials/project-link", locals: { title: project.title,
-      color: project.color, image: project.image }
-  %time.time-divider 2016
-  - data.projects_2016.each do |project|
-    = partial "partials/project-link", locals: { title: project.title,
-      color: project.color, image: project.image }
+.project-list
+  %time.project-list__year-divider= "2017"
+  - page_articles[0..1].each do |project|
+    = partial "partials/project-item", locals: { link: project,
+      title: project.title, color: project.data.color, image: project.data.image  }
+  %time.project-list__year-divider= "2016"
+  - page_articles[2..4].each do |project|
+    = partial "partials/project-item", locals: { link: project,
+      title: project.title, color: project.data.color, image: project.data.image  }
