@@ -1,0 +1,6 @@
+%header.project-header{ style: "background-color: #{project.data.color};" }
+  .container
+    %h2.project-title
+      = project.title
+      %time.project-title__date= project.date.strftime("%Y")
+    %p.project-details= project.tags.join(', ')

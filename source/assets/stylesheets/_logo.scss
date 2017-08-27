@@ -1,4 +1,4 @@
-.index-logo {
+.header-logo {
   @include position(absolute, $large-spacing $large-spacing null null);
 
   svg {
@@ -6,7 +6,7 @@
   }
 }
 
-.article-logo {
+.footer-logo {
   svg {
     fill: $white;
   }

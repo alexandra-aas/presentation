@@ -2,14 +2,9 @@
 %html{ lang: "en" }
   = partial "partials/head"
   %body{ class: page_classes }
-    %header.project-header{ style: "background-color: #{current_article.data.color};" }
-      .container
-        %h2.project-title
-          = current_article.title
-          %time.project-title__date= current_article.date.strftime("%Y")
-        %p.project-details= current_article.tags.join(', ')
+    = partial "partials/project-header", locals: { project: current_article }
     %section.project-images{ role: "main" }
-      .container
+      .container.project-images
         = yield
     %footer
       .container
