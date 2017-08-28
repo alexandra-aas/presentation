@@ -2,6 +2,7 @@
 %html{ lang: "en" }
   = partial "partials/head"
   %body{ class: page_classes }
-    %main
-      = partial "partials/header-logo"
-      = yield
+    .fade-in
+      %main
+        = partial "partials/header-logo"
+        = yield

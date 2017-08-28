@@ -1,0 +1,11 @@
+.project-images {
+  @include media-up($large-screen) {
+    margin-top: -$large-spacing;
+  }
+}
+
+.project-image {
+  display: block;
+  margin-bottom: $small-spacing;
+  width: 100%;
+}

@@ -10,8 +10,8 @@
         .project-control__background{ style: "background-color: #{project_previous.data.color}" }
 
   .project-control.project-control--home
-    = link_to "/", class: "footer-logo" do
-      = svg("logo")
+    = link_to "/", class: "project-control__link" do
+      = material_icon("menu", "")
 
   .project-control.project-control--next
     - if project_next

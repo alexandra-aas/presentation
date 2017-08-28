@@ -1,0 +1,34 @@
+.project-header {
+  color: $black;
+  padding: $medium-spacing;
+
+  @include media-up($large-screen) {
+    padding: $large-spacing $large-spacing $xl-spacing;
+  }
+}
+
+.project-title {
+  display: inline-block;
+  position: relative;
+}
+
+.project-title__date {
+  font-size: $base-font-size;
+
+  @include media-down($large-screen) {
+    display: block;
+    margin-bottom: $base-spacing;
+  }
+
+  @include media-up($large-screen) {
+    @include position(absolute, 0 null null 100%);
+  }
+}
+
+.project-details {
+  margin-top: $small-spacing;
+
+  @include media-up($large-screen) {
+    margin-top: $base-spacing;
+  }
+}

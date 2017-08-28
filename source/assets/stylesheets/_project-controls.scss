@@ -1,0 +1,61 @@
+.project-controls-wrapper {
+  @include position(fixed, null 0 0);
+  background-color: $base-background-color;
+}
+
+.project-controls {
+  @include margin($base-spacing null);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-control {
+  width: calc(100% / 3);
+}
+
+.project-control--home {
+  text-align: center;
+}
+
+.project-control--next {
+  text-align: right;
+}
+
+.project-control__link {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+}
+
+.project-control__icon,
+.project-control__label {
+  position: relative;
+  z-index: $low-z-index;
+}
+
+.project-control__label {
+  @include margin(null $small-spacing);
+  font-size: $medium-font-size;
+  opacity: 0;
+  transition: opacity $base-duration $base-timing;
+
+  .project-control__link:hover & {
+    opacity: 1;
+  }
+
+  @include media-down($medium-screen) {
+    display: none;
+  }
+}
+
+.project-control__background {
+  @include position(absolute, 0);
+  content: "";
+  opacity: 0;
+  transition: opacity $base-duration $base-timing;
+
+  .project-control__link:hover & {
+    opacity: 1;
+  }
+}

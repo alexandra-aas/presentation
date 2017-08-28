@@ -2,10 +2,11 @@
 %html{ lang: "en" }
   = partial "partials/head"
   %body{ class: page_classes }
-    = partial "partials/project-header", locals: { project: current_article }
-    %section.project-images
-      .container
-        = yield
-    %footer
-      .container
-        = partial "partials/project-controls", locals: { project: current_article }
+    .fade-in
+      = partial "partials/project-header", locals: { project: current_article }
+      %section.project-images
+        .container
+          = yield
+      %footer.project-controls-wrapper
+        .container
+          = partial "partials/project-controls", locals: { project: current_article }
