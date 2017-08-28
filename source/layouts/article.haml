@@ -3,8 +3,8 @@
   = partial "partials/head"
   %body{ class: page_classes }
     = partial "partials/project-header", locals: { project: current_article }
-    %section.project-images{ role: "main" }
-      .container.project-images
+    %section.project-images
+      .container
         = yield
     %footer
       .container

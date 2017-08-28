@@ -11,6 +11,7 @@ html {
 
 h2 {
   font-size: $large-font-size;
+  font-weight: normal;
   line-height: $single-line-height;
   margin: 0;
 }
@@ -31,5 +32,4 @@ a {
 
 time {
   font-family: $monospace-font-family;
-  font-weight: 400;
 }

@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: "Regular Semibold", sans-serif;
+$base-font-family: "Regular", sans-serif;
 $monospace-font-family: "Space Mono", sans-serif;
 
 // Font Sizes
@@ -14,15 +14,13 @@ $single-line-height: 1;
 // Spacing
 $base-spacing: 1.25rem;
 $small-spacing: $base-spacing * 0.5;
-$medium-spacing: $base-spacing * 2;
-$large-spacing: $base-spacing * 5;
-$xl-spacing: $base-spacing * 7.5;
+$medium-spacing: $base-spacing * 5;
+$large-spacing: $base-spacing * 7.5;
 
 // Colors
 $black: #000;
-
+$gray: #777;
 $white: #fff;
-$gray: rgba($white, 0.5);
 
 // Font Colors
 $base-font-color: $white;
@@ -38,3 +36,6 @@ $base-timing: ease;
 
 // Sizes
 $container-width: 1100px;
+
+// Z-Index
+$low-z-index: 10;

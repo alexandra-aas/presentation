@@ -2,6 +2,6 @@
 %html{ lang: "en" }
   = partial "partials/head"
   %body{ class: page_classes }
-    %main{ role: "main" }
-      = partial "partials/header-logo", locals: { page: "index" }
+    %main
+      = partial "partials/header-logo"
       = yield

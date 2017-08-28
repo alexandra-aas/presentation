@@ -1,7 +1,7 @@
 
 .project-header {
   color: $black;
-  padding: $large-spacing $large-spacing $xl-spacing;
+  padding: $medium-spacing $medium-spacing $large-spacing;
 }
 
 .project-title {
@@ -19,7 +19,7 @@
 }
 
 .project-images {
-  margin-top: -$large-spacing;
+  margin-top: -$medium-spacing;
 }
 
 .project-image {
@@ -29,7 +29,7 @@
 }
 
 .project-controls {
-  @include margin($large-spacing null);
+  @include margin($medium-spacing null);
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -48,7 +48,6 @@
 }
 
 .project-control__link {
-  background-color: $base-background-color !important;
   align-items: center;
   display: inline-flex;
   position: relative;
@@ -57,7 +56,7 @@
 .project-control__icon,
 .project-control__label {
   position: relative;
-  z-index: 10;
+  z-index: $low-z-index;
 }
 
 .project-control__label {

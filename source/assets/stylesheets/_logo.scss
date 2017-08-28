@@ -1,5 +1,5 @@
 .header-logo {
-  @include position(absolute, $large-spacing $large-spacing null null);
+  @include position(absolute, $medium-spacing $medium-spacing null null);
 
   svg {
     fill: $gray;

@@ -11,7 +11,7 @@
 
   &::before {
     @include position(absolute, 50% 100% null null);
-    @include size(calc(#{$large-spacing} - #{$base-spacing * 2}), 1px);
+    @include size(calc(#{$medium-spacing} - #{$base-spacing * 2}), 1px);
     background: linear-gradient(to right, transparent , $gray);
     content: "";
     margin-right: $base-spacing;
@@ -26,7 +26,7 @@
 
 .project-item__title {
   position: relative;
-  z-index: 10;
+  z-index: $low-z-index;
 }
 
 .project-item__background {
@@ -49,13 +49,13 @@
   transition: opacity $base-duration $base-timing;
   z-index: -1;
 
+  .project-item:hover & {
+    opacity: 1;
+  }
+
   img {
     max-height: 80vh;
     max-width: 80vw;
     opacity: 0.5;
-  }
-
-  .project-item:hover & {
-    opacity: 1;
   }
 }

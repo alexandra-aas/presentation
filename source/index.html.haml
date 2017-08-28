@@ -1,9 +1,9 @@
 .project-list
-  %time.project-list__year-divider= "2017"
+  %time.project-list__year-divider 2017
   - page_articles[0..1].each do |project|
     = partial "partials/project-item", locals: { link: project,
       title: project.title, color: project.data.color, image: project.data.image  }
-  %time.project-list__year-divider= "2016"
+  %time.project-list__year-divider 2016
   - page_articles[2..4].each do |project|
     = partial "partials/project-item", locals: { link: project,
       title: project.title, color: project.data.color, image: project.data.image  }
