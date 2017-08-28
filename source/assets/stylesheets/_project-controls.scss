@@ -1,6 +1,10 @@
 .project-controls-wrapper {
   @include position(fixed, null 0 0);
   background-color: $base-background-color;
+
+  @include media-down($large-screen) {
+    @include padding(null $base-spacing);
+  }
 }
 
 .project-controls {
