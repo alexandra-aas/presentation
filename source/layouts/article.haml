@@ -7,6 +7,4 @@
       %section.project-images
         .container
           = yield
-      %footer.project-controls-wrapper
-        .container
-          = partial "partials/project-controls", locals: { project: current_article }
+      = partial "partials/project-controls", locals: { project: current_article }

@@ -1,4 +1,5 @@
-.project-controls-wrapper {
+.controls-wrapper {
+  @include padding($base-spacing null);
   @include position(fixed, null 0 0);
   background-color: $base-background-color;
 
@@ -7,44 +8,50 @@
   }
 }
 
-.project-controls {
-  @include margin($base-spacing null);
+.controls {
   align-items: center;
   display: flex;
-  justify-content: space-between;
 }
 
-.project-control {
+.control {
   width: calc(100% / 3);
 }
 
-.project-control--home {
+.control--home {
   text-align: center;
 }
 
-.project-control--next {
+.control--next {
   text-align: right;
 }
 
-.project-control__link {
+.control-link {
   align-items: center;
   display: inline-flex;
+  overflow: hidden;
   position: relative;
+
+  &:hover {
+    .control--home & {
+      color: $white;
+    }
+  }
 }
 
-.project-control__icon,
-.project-control__label {
+.control-link__icon,
+.control-link__label {
   position: relative;
   z-index: $low-z-index;
 }
 
-.project-control__label {
+.control-link__label {
   @include margin(null $small-spacing);
+  color: $black;
   font-size: $medium-font-size;
   opacity: 0;
   transition: opacity $base-duration $base-timing;
 
-  .project-control__link:hover & {
+  .control-link:hover & {
     opacity: 1;
   }
 
@@ -53,13 +60,30 @@
   }
 }
 
-.project-control__background {
-  @include position(absolute, 0);
+.control-link__background {
+  @include position(absolute, 0 null);
   content: "";
   opacity: 0;
-  transition: opacity $base-duration $base-timing;
+  transition: all $base-duration $base-timing;
+  width: 100%;
 
-  .project-control__link:hover & {
+  .control--next & {
+    left: 100%;
+  }
+
+  .control--previous & {
+    right: 100%;
+  }
+
+  .control-link:hover & {
     opacity: 1;
+  }
+
+  .control--next:hover & {
+    left: 0;
+  }
+
+  .control--previous:hover & {
+    right: 0;
   }
 }

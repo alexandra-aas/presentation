@@ -26,6 +26,7 @@
 .project-item {
   margin-bottom: $base-spacing;
   padding: $small-spacing;
+  overflow: hidden;
   position: relative;
 }
 
@@ -35,12 +36,15 @@
 }
 
 .project-item__background {
-  @include position(absolute, 0);
+  @include position(absolute, 0 null);
   opacity: 0;
-  transition: opacity $base-duration $base-timing;
+  right: 100%;
+  transition: all $base-duration $base-timing;
+  width: 100%;
 
   .project-item:hover & {
     opacity: 1;
+    right: 0;
   }
 }
 
