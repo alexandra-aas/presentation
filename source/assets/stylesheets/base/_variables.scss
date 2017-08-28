@@ -4,18 +4,21 @@ $monospace-font-family: "Space Mono", sans-serif;
 
 // Font Sizes
 $base-font-size: 1rem;
-$medium-font-size: $base-font-size * 1.25;
-$large-font-size: $base-font-size * 6.25;
+$medium-font-size: $base-font-size * 1.25; // 20
+$large-font-size: $base-font-size * 3.125; // 50
+$xl-font-size: $base-font-size * 6.25; // 100
 
 // Line height
 $base-line-height: 1.5;
+$heading-line-height: 1.2;
 $single-line-height: 1;
 
 // Spacing
-$base-spacing: 1.25rem;
-$small-spacing: $base-spacing * 0.5;
-$medium-spacing: $base-spacing * 5;
-$large-spacing: $base-spacing * 7.5;
+$base-spacing: 1.25rem; // 20
+$small-spacing: $base-spacing * 0.5; // 10
+$medium-spacing: $base-spacing * 2.5; // 50
+$large-spacing: $base-spacing * 5; // 100
+$xl-spacing: $base-spacing * 7.5; // 150
 
 // Colors
 $black: #000;

@@ -12,8 +12,13 @@ html {
 h2 {
   font-size: $large-font-size;
   font-weight: normal;
-  line-height: $single-line-height;
+  line-height: $heading-line-height;
   margin: 0;
+
+  @include media-up($large-screen) {
+    font-size: $xl-font-size;
+    line-height: $single-line-height;
+  }
 }
 
 p {

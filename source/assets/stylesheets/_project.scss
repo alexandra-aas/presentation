@@ -1,7 +1,11 @@
 
 .project-header {
   color: $black;
-  padding: $medium-spacing $medium-spacing $large-spacing;
+  padding: $medium-spacing;
+
+  @include media-up($large-screen) {
+    padding: $large-spacing $large-spacing $xl-spacing;
+  }
 }
 
 .project-title {
@@ -10,16 +14,30 @@
 }
 
 .project-title__date {
-  @include position(absolute, 0 null null 100%);
   font-size: $base-font-size;
+
+  @include media-down($large-screen) {
+    display: block;
+    margin-bottom: $base-spacing;
+  }
+
+  @include media-up($large-screen) {
+    @include position(absolute, 0 null null 100%);
+  }
 }
 
 .project-details {
-  margin-top: $base-spacing;
+  margin-top: $small-spacing;
+
+  @include media-up($large-screen) {
+    margin-top: $base-spacing;
+  }
 }
 
 .project-images {
-  margin-top: -$medium-spacing;
+  @include media-up($large-screen) {
+    margin-top: -$large-spacing;
+  }
 }
 
 .project-image {
@@ -33,6 +51,14 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @include media-down($large-screen) {
+    @include padding(null $medium-spacing);
+  }
+
+  @include media-up($large-screen) {
+    @include margin($large-spacing null);
+  }
 }
 
 .project-control {
@@ -62,6 +88,10 @@
 .project-control__label {
   @include margin(null $small-spacing);
   font-size: $medium-font-size;
+
+  @include media-down($medium-screen) {
+    display: none;
+  }
 }
 
 .project-control__background {

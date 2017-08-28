@@ -1,5 +1,12 @@
 .header-logo {
-  @include position(absolute, $medium-spacing $medium-spacing null null);
+  @include media-down($large-screen) {
+    align-self: center;
+    margin-bottom: $medium-spacing;
+  }
+
+  @include media-up($large-screen) {
+    @include position(absolute, $large-spacing $large-spacing null null);
+  }
 
   svg {
     fill: $gray;
