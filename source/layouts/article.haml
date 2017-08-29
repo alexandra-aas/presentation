@@ -4,7 +4,5 @@
   %body{ class: page_classes }
     .fade-in
       = partial "partials/project-header", locals: { project: current_article }
-      %section.project-images
-        .container
-          = yield
+      = partial "partials/project-images"
       = partial "partials/project-controls", locals: { project: current_article }

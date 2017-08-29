@@ -1,0 +1,4 @@
+%section.project-images
+  .container
+    - Dir.glob("source/assets/images/#{current_article.data.image_folder}/*") do |image|
+      = image_tag "#{current_article.data.image_folder}/#{image.split('/').last}", class: "project-image"
