@@ -1,4 +1,6 @@
+- images = Dir.glob("source/assets/images/#{current_article.data.image_folder}/*")
+
 %section.project-images-wrapper
   .container.project-images
-    - Dir.glob("source/assets/images/#{current_article.data.image_folder}/*") do |image|
+    - images.sort.each do |image|
       = image_tag "#{current_article.data.image_folder}/#{image.split('/').last}", class: "project-image"
