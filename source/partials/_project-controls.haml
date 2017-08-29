@@ -9,7 +9,7 @@
           = link_to project_previous.url, class: "control-link" do
             = material_icon("arrow_back", "control-link__icon")
             %span.control-link__label= project_previous.title
-            .control-link__background{ style: "background-color: #{project_previous.data.color}" }
+            .control-link__background{ style: "background: #{project_previous.data.color}" }
 
       .control.control--home
         = link_to "/", class: "control-link" do
@@ -20,4 +20,4 @@
           = link_to project_next.url, class: "control-link" do
             %span.control-link__label= project_next.title
             = material_icon("arrow_forward", "control-link__icon")
-            .control-link__background{ style: "background-color: #{project_next.data.color}" }
+            .control-link__background{ style: "background: #{project_next.data.color}" }

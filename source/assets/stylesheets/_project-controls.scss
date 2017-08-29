@@ -1,5 +1,4 @@
 .controls-wrapper {
-  @include padding($base-spacing null);
   @include position(fixed, null 0 0);
   background-color: $base-background-color;
 
@@ -11,6 +10,7 @@
 .controls {
   align-items: center;
   display: flex;
+  height: $controls-height;
 }
 
 .control {
@@ -46,14 +46,7 @@
 
 .control-link__label {
   @include margin(null $small-spacing);
-  color: $black;
   font-size: $medium-font-size;
-  opacity: 0;
-  transition: opacity $base-duration $base-timing;
-
-  .control-link:hover & {
-    opacity: 1;
-  }
 
   @include media-down($medium-screen) {
     display: none;

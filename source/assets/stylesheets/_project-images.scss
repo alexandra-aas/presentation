@@ -1,7 +1,13 @@
-.project-images {
+.project-images-wrapper {
+  margin-bottom: $controls-height;
+
   @include media-up($large-screen) {
     margin-top: -$large-spacing;
   }
+}
+
+.project-images {
+  outline: 10px solid $base-background-color;
 }
 
 .project-image {

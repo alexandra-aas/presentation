@@ -5,7 +5,7 @@
   }
 
   @include media-up($large-screen) {
-    @include position(absolute, $large-spacing $large-spacing null null);
+    @include position(fixed, $large-spacing $large-spacing null null);
   }
 
   svg {
