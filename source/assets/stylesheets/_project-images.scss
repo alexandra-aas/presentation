@@ -1,7 +1,8 @@
 .project-images-wrapper {
-  margin-bottom: $controls-height;
+  margin-bottom: $controls-height-small;
 
   @include media-up($medium-screen) {
+    margin-bottom: $controls-height;
     margin-top: -$medium-spacing;
   }
 

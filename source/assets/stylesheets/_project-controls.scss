@@ -11,10 +11,10 @@
   align-items: center;
   box-sizing: content-box;
   display: flex;
-  height: $controls-height;
+  height: $controls-height-small;
 
   @include media-up($medium-screen) {
-    @include padding($base-spacing null);
+    height: $controls-height;
   }
 }
 
