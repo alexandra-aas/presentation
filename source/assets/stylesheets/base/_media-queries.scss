@@ -1,4 +1,4 @@
-$medium-screen: 700px;
+$medium-screen: $container-width-small;
 $large-screen: $container-width;
 
 @mixin media-up($media) {

@@ -2,6 +2,10 @@
   color: $black;
   padding: $medium-spacing $base-spacing;
 
+  @include media-up($medium-screen) {
+    padding: $medium-spacing $medium-spacing $large-spacing;
+  }
+
   @include media-up($large-screen) {
     padding: $large-spacing $large-spacing $xl-spacing;
   }

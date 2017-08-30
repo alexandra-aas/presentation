@@ -1,6 +1,10 @@
 .project-images-wrapper {
   margin-bottom: $controls-height;
 
+  @include media-up($medium-screen) {
+    margin-top: -$medium-spacing;
+  }
+
   @include media-up($large-screen) {
     margin-top: -$large-spacing;
   }

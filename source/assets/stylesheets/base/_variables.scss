@@ -6,7 +6,7 @@ $monospace-font-family: "Space Mono", sans-serif;
 $base-font-size: 1rem;
 $medium-font-size: $base-font-size * 1.25; // 20
 $large-font-size: $base-font-size * 2.25; // 36
-$xl-font-size: $base-font-size * 3.125; // 50
+$xl-font-size: $base-font-size * 4.375; // 50
 $xxl-font-size: $base-font-size * 6.25; // 100
 
 // Line height
@@ -43,6 +43,7 @@ $base-timing: ease-in-out;
 
 // Sizes
 $container-width: 1100px;
+$container-width-small: 700px;
 $controls-height: 60px;
 
 // Z-Index

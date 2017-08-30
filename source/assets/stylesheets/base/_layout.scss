@@ -29,5 +29,9 @@ main {
 
 .container {
   @include margin(null auto);
-  max-width: $container-width;
+  max-width: $container-width-small;
+
+  @include media-up($large-screen) {
+    max-width: $container-width;
+  }
 }
