@@ -1,3 +1,5 @@
+$project-item-image-height: 600px;
+
 .project-list {
   align-items: flex-start;
   display: flex;
@@ -63,9 +65,12 @@
   }
 
   img {
+    @include size($container-width, $project-item-image-height);
     filter: grayscale(100%);
-    width: 1000px;
-    height: 600px;
     opacity: 0.5;
+
+    @include media-down($large-screen) {
+      display: none;
+    }
   }
 }
