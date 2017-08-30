@@ -27,9 +27,12 @@ $project-item-image-height: 600px;
 
 .project-item {
   margin-bottom: $base-spacing;
-  padding: $small-spacing;
   overflow: hidden;
   position: relative;
+
+  @include media-up($large-screen) {
+    padding: $small-spacing;
+  }
 }
 
 .project-item__title {

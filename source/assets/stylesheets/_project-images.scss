@@ -7,7 +7,13 @@
 }
 
 .project-images {
-  outline: 10px solid $base-background-color;
+  @include media-down($large-screen) {
+    border: $base-border;
+  }
+
+  @include media-up($large-screen) {
+    outline: $base-border;
+  }
 }
 
 .project-image {

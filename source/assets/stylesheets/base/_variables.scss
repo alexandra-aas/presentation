@@ -34,6 +34,9 @@ $hover-action-color: $black;
 // Background Colors
 $base-background-color: $black;
 
+// Borders
+$base-border: $small-spacing solid $base-background-color;
+
 // Animations
 $base-duration: 300ms;
 $base-timing: ease-in-out;
