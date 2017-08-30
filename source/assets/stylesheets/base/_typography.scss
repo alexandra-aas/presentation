@@ -15,8 +15,12 @@ h2 {
   line-height: $heading-line-height;
   margin: 0;
 
-  @include media-up($large-screen) {
+  @include media-up($medium-screen) {
     font-size: $xl-font-size;
+  }
+
+  @include media-up($large-screen) {
+    font-size: $xxl-font-size;
     line-height: $single-line-height;
   }
 }

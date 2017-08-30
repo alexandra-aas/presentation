@@ -1,6 +1,6 @@
 .project-header {
   color: $black;
-  padding: $medium-spacing;
+  padding: $medium-spacing $base-spacing;
 
   @include media-up($large-screen) {
     padding: $large-spacing $large-spacing $xl-spacing;

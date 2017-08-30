@@ -5,8 +5,9 @@ $monospace-font-family: "Space Mono", sans-serif;
 // Font Sizes
 $base-font-size: 1rem;
 $medium-font-size: $base-font-size * 1.25; // 20
-$large-font-size: $base-font-size * 3.125; // 50
-$xl-font-size: $base-font-size * 6.25; // 100
+$large-font-size: $base-font-size * 2.25; // 36
+$xl-font-size: $base-font-size * 3.125; // 50
+$xxl-font-size: $base-font-size * 6.25; // 100
 
 // Line height
 $base-line-height: 1.5;
@@ -39,7 +40,7 @@ $base-timing: ease-in-out;
 
 // Sizes
 $container-width: 1100px;
-$controls-height: 100px;
+$controls-height: 60px;
 
 // Z-Index
 $low-z-index: 10;
