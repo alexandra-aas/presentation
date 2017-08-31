@@ -16,6 +16,7 @@ $single-line-height: 1;
 
 // Spacing
 $base-spacing: 1.25rem; // 20
+$xs-spacing: $base-spacing * 0.25; // 10
 $small-spacing: $base-spacing * 0.5; // 10
 $medium-spacing: $base-spacing * 2.5; // 50
 $large-spacing: $base-spacing * 5; // 100

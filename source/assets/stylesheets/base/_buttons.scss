@@ -1,0 +1,21 @@
+$button-border: 2px solid $white;
+
+.button {
+  @include margin($medium-spacing);
+  background-color: transparent;
+  color: $white;
+  border: $button-border;
+  display: inline-block;
+  font-size: $base-font-size;
+  padding: $xs-spacing $medium-spacing;
+  position: relative;
+  transition: background-color $base-duration $base-timing;
+
+  @include media-up($medium-screen) {
+    font-size: $medium-font-size;
+  }
+
+  &:hover {
+    background-color: $white;
+  }
+}

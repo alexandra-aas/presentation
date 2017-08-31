@@ -1,0 +1,10 @@
+- images = Dir.glob("source/assets/images/#{project.data.image_folder}/*")
+
+%section.project-content
+  .container.project-images
+    - images.sort.each do |image|
+      = image_tag "#{project.data.image_folder}/#{image.split('/').last}", class: "project-image"
+
+    - if project.data.external_link && project.data.external_link_text
+      = link_to project.data.external_link_text, project.data.external_link,
+        class: "button", target: "_blank"
